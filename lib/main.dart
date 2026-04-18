@@ -10,6 +10,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
+
       home: Scaffold(
         backgroundColor: const Color(0xFFF8FAFC),
         appBar: AppBar(
@@ -69,7 +71,7 @@ class MyApp extends StatelessWidget {
                     ),
                     SizedBox(height: 8),
                     Text(
-                      'Begin your journey with the quiet\nauthority of precision',
+                      'Begin your journey with the quiet\nauthority of precision', // This is how you break text //
                     ),
                     SizedBox(height: 24),
             
@@ -155,6 +157,27 @@ class MyApp extends StatelessWidget {
                         ),
                         )
                     ),
+                    SizedBox(height:24),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Divider(
+                            color: Colors.black,
+                            thickness: 1,
+                          ),
+                        ),
+                        SizedBox(width: 12),
+                        Text('OR CONTINUE WITH'),
+                        SizedBox(width: 12),
+                        Expanded(
+                          child: Divider(
+                            color: Colors.black,
+                            thickness: 1,
+                          ),
+                        )
+                      ],
+                    )
             
 
                   ],
