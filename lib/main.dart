@@ -98,9 +98,30 @@ class MyApp extends StatelessWidget {
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
+                      ),
+                      hintText: 'name@company.com',
+                      hintStyle: TextStyle(
+                        color: Color(0xFF9CA3AF),
+                        fontSize: 14,
                       )
                     ),
+                  ),
+
+                  SizedBox(height: 24),
+                  //Third input field section //
+                  Text('PASSWORD'),
+                  TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10)
+                      ),
+                          hintText: '********',
+                          hintStyle: TextStyle(
+                            color:Color(0xFF9CA3AF),
+                          )
+                    ),
                   )
+
                 ],
               ),
             ),
