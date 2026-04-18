@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -169,15 +171,48 @@ class MyApp extends StatelessWidget {
                         ),
                         SizedBox(width: 12),
                         Text('OR CONTINUE WITH'),
-                        SizedBox(width: 12),
-                        Expanded(
+                        SizedBox(width: 12),      // Use a sized box with expanded //
+                        Expanded( // The divider does not automatically get width so use expanded or we use indent and endent to control length //
                           child: Divider(
                             color: Colors.black,
                             thickness: 1,
                           ),
                         )
                       ],
+                    ),
+                    SizedBox(height: 24,),
+
+                    // This is where I'll put the row with buttons //
+
+                    Row(
+                      children: [
+                        ElevatedButton(
+                          onPressed: (){},
+                            style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.zero,
+                              )
+                            ),
+                          child:Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal:23,
+                                vertical: 12,
+                            ),
+                            child: Row(
+                              children: [
+                                Icon(Icons.person_sharp),
+                                SizedBox(width:12),
+                                Text('Google'),
+                              ],
+                            ),
+                          )
+                        ),
+                      ],
+                    ),
+                    Row(
+
                     )
+
             
 
                   ],
