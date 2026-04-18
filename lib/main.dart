@@ -46,14 +46,34 @@ class MyApp extends StatelessWidget {
               horizontal: 24,
               vertical:27,
             ),
-            child: Container(
-              color: Color(0xFFF2F4F7),
-              child:Column(
+            child: Container( // THIS IS THE CONTAINER FOR THE MAIN COLUMN//
+              color: Colors.teal,
+              child:Column( // THIS IS THE MAIN COLUMN CONTAINER //
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(32.0),
+                    child: Column( // THIS IS THE TEXT HEADER SECTION COLUMN //
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Container(
+                          child:Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text('Create Account',
+                              style: TextStyle(
+                              fontSize: 30,
+                              ),
+                              ),
+                              Text('Begin your journey with the quiet authority of precision'),
+                            ]
+                          )
+                        )
+                      ],
+                    ),
+                  )
 
+                ],
               )
-
-
-
 
              ),
           )
