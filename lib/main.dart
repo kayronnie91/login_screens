@@ -48,81 +48,117 @@ class MyApp extends StatelessWidget {
             horizontal: 24,
             vertical: 27,
           ),
-          child: Container( // this is the container holding the column //
-            decoration: BoxDecoration(
-              color: Color(0xFFF2F4F7),
-              borderRadius: BorderRadius.circular(15),
-            ),
-
-            child: Padding(
-              padding: EdgeInsets.all(32),
-              child: Column( // this is the column holding all contents inside such as input fields //
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Create Account',
-                    style: TextStyle(
-                      fontSize: 30,
-                        color: Color(0xFF004B87),
-                    ),
-                  ),
-                  SizedBox(height: 8),
-                  Text(
-                    'Begin your journey with the quiet\nauthority of precision',
-                  ),
-                  SizedBox(height: 24),
-
-                  // FIRST INPUT FIELD//
-
-                  Text('FULL NAME'),
-                  SizedBox(height: 8),
-                  TextField(
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
+          child: SingleChildScrollView(
+            child: Container( // this is the container holding the column //
+              decoration: BoxDecoration(
+                color: Color(0xFFF2F4F7),
+                borderRadius: BorderRadius.circular(15),
+              ),
+            
+              child: Padding(
+                padding: EdgeInsets.all(32),
+                child: Column( // this is the column holding all contents inside such as input fields //
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Create Account',
+                      style: TextStyle(
+                        fontSize: 30,
+                          color: Color(0xFF004B87),
                       ),
-                      hintText: 'Enter your Name',
-                      hintStyle: TextStyle(
-                        color: Color(0xFF9CA3AF),
-                        fontSize: 14,
-                      )
                     ),
-                  ),
-                  SizedBox(height:24),
-
-                  //SECOND INPUT FIELD
-
-                  Text('EMAIL ADDRESS'),
-                  SizedBox(height: 8),
-                  TextField(
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
+                    SizedBox(height: 8),
+                    Text(
+                      'Begin your journey with the quiet\nauthority of precision',
+                    ),
+                    SizedBox(height: 24),
+            
+                    // FIRST INPUT FIELD//
+            
+                    Text('FULL NAME'),
+                    SizedBox(height: 8),
+                    TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        hintText: 'Enter your Name',
+                        hintStyle: TextStyle(
+                          color: Color(0xFF9CA3AF),
+                          fontSize: 14,
+                        )
                       ),
-                      hintText: 'name@company.com',
-                      hintStyle: TextStyle(
-                        color: Color(0xFF9CA3AF),
-                        fontSize: 14,
-                      )
                     ),
-                  ),
-
-                  SizedBox(height: 24),
-                  //Third input field section //
-                  Text('PASSWORD'),
-                  TextField(
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10)
+                    SizedBox(height:24),
+            
+                    //SECOND INPUT FIELD
+            
+                    Text('EMAIL ADDRESS'),
+                    SizedBox(height: 8),
+                    TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        hintText: 'name@company.com',
+                        hintStyle: TextStyle(
+                          color: Color(0xFF9CA3AF),
+                          fontSize: 14,
+                        )
                       ),
-                          hintText: '********',
-                          hintStyle: TextStyle(
-                            color:Color(0xFF9CA3AF),
-                          )
                     ),
-                  )
+            
+                    SizedBox(height: 24),
+                    //Third input field section //
+                    Text('PASSWORD'),
+                    SizedBox(height:8),
+                    TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10)
+                        ),
+                            hintText: '********',
+                            hintStyle: TextStyle(
+                              color:Color(0xFF9CA3AF),
+                            )
+                      ),
+                    ),
+            
+                    // Last input field //
+                    
+                    SizedBox(height:24),
+                    Text('CONFIRM'),
+                    SizedBox(height:8),
+                    TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        hintText: '********',
+                        hintStyle: TextStyle(
+                          color:Color(0xFF9CA3AF),
+                        )
+                      ),
+                    ),
+                    SizedBox(height: 24),
 
-                ],
+                    // THIS IS WHERE WE PUT THE BUTTON //
+                    ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          minimumSize: Size(double.infinity,56),
+                          backgroundColor: Color(0xFF003461),
+                        ),
+                        onPressed:(){},
+                        child:Text('Sign Up',
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                        )
+                    ),
+            
+
+                  ],
+                ),
               ),
             ),
           ),
