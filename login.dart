@@ -148,9 +148,16 @@ class MyApp extends StatelessWidget {
                             ],
                           ),
                         ),
-                      )
+                      ),
+                      SizedBox(height: 40),
                     ],
+                  ),
+
+                  Center(child: Text(
+                    '\u00a9 AUTHORITY 2024 ARCHITECTURAL SYSTEMS\nPRIVACY PROTOCOL LEGAL AUTHORITY',
+                    textAlign: TextAlign.center,)
                   )
+
                 ],
               ),
             ),
