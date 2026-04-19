@@ -24,9 +24,22 @@ class MyApp extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('WELCOME BACK'),
-                      Text('WELCOME BACK'),
+                      Text('WELCOME BACK',
+                      style: TextStyle(
+                      fontSize: 14,
+                        color: Color(0xFF003461),
+                        letterSpacing: 2.8,
+                      ),
+                      ),
+                      SizedBox(height: 8),
+                      Text('Login to your account',
+                      style:TextStyle(
+                      fontSize: 30,
+                        letterSpacing: -0.75,
+                      )
+                      ),
                     ],
                   ),
                   SizedBox(height:40),
@@ -52,7 +65,11 @@ class MyApp extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text('PASSWORD'),
-                          Text('FORGOT PASSWORD')
+                          Text('FORGOT PASSWORD',
+                          style: TextStyle(
+                            color: Color(0xFF003461),
+                            fontWeight: FontWeight(600)
+                          ),)
                         ],
                       ),
                       SizedBox(height: 8),
@@ -71,9 +88,17 @@ class MyApp extends StatelessWidget {
                       ElevatedButton(
                         onPressed: (){},
                         style: ElevatedButton.styleFrom(
+                          backgroundColor: Color(0xFF004B87),
                           minimumSize:Size(double.infinity,56)
                         ),
-                        child: Text('LOGIN'),
+                        child: Text('LOGIN',
+                        style: TextStyle(
+                          fontWeight: FontWeight(700),
+                          fontSize: 14,
+                          letterSpacing: 1.4,
+                          color: Colors.white,
+                        ),
+                        ),
                       ),
                       SizedBox(height: 40),
                       Row(    // THIS IS THE ROW WITH OR CONTINUE HERE //
@@ -108,7 +133,11 @@ class MyApp extends StatelessWidget {
                                 children: [
                                   Icon(Icons.logo_dev),
                                   SizedBox(width:12),
-                                  Text('Google'),
+                                  Text('Google',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                  ),
+                                  ),
                                 ],
                               ),
                             )
@@ -121,7 +150,11 @@ class MyApp extends StatelessWidget {
                                   children: [
                                     Icon(Icons.logo_dev),
                                     SizedBox(width:12),
-                                    Text('Apple'),
+                                    Text('Apple',
+                                    style:TextStyle(
+                                      color:Colors.black,
+                                    )
+                                    ),
                                   ],
                                 ),
                               )
