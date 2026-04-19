@@ -57,6 +57,7 @@ class MyApp extends StatelessWidget {
                 SizedBox(height:12),
                 TextField(
                   decoration: InputDecoration(
+                    border: InputBorder.none,
                     fillColor: Color(0xFF121411),
                     filled: true,
                     hintText: 'Alex Rivera',
@@ -77,6 +78,7 @@ class MyApp extends StatelessWidget {
                 ),
                 TextField(
                   decoration: InputDecoration(
+                    border: InputBorder.none,
                     fillColor: Color(0xFF121411),
                     filled: true,
                     hintText: 'name@email.com',
@@ -95,6 +97,7 @@ class MyApp extends StatelessWidget {
                 ),
                 TextField(
                   decoration: InputDecoration(
+                    border: InputBorder.none,
                     fillColor: Color(0xFF121411),
                     filled: true,
                     hintText: '************',
