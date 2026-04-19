@@ -46,10 +46,80 @@ class MyApp extends StatelessWidget {
                 // END OF HERO SECTION //
                 // MAIN COLUMN HOLDING INPUT FIELDS //
 
+                // FIRST TEXT FIELD //
+
                 Text('FULL NAME',
                 style: TextStyle(
                   color: Color(0xFFABABA6),
+                  fontSize: 12,
                 ),
+                ),
+                SizedBox(height:12),
+                TextField(
+                  decoration: InputDecoration(
+                    fillColor: Color(0xFF121411),
+                    filled: true,
+                    hintText: 'Alex Rivera',
+                    hintStyle: TextStyle(),
+                    )
+                  ),
+
+
+                SizedBox(height:24),
+
+                // SECOND TEXT FIELD //
+
+                Text('EMAIL ADDRESS',
+                style:TextStyle(
+                  color: Color(0xFFABABA6),
+                  fontSize: 12,
+                ),
+                ),
+                TextField(
+                  decoration: InputDecoration(
+                    fillColor: Color(0xFF121411),
+                    filled: true,
+                    hintText: 'name@email.com',
+                    hintStyle: TextStyle(),
+                  ),
+                ),
+
+                SizedBox(height: 23),
+
+                // THIRD TEXT FIELD //
+                Text('PASSWORD',
+                style:TextStyle(
+                  color: Color(0xFFABABA6),
+                  fontSize: 12,
+                )
+                ),
+                TextField(
+                  decoration: InputDecoration(
+                    fillColor: Color(0xFF121411),
+                    filled: true,
+                    hintText: '************',
+                    hintStyle: TextStyle(),
+                  ),
+                ),
+                SizedBox(height: 24),
+                Center(
+                  child: ElevatedButton(
+                    onPressed: (){},
+                      style:ElevatedButton.styleFrom(
+                        backgroundColor: Color(0xFFEAFFB8),
+                        elevation: 8,
+                        minimumSize: Size(double.infinity,60),
+                      ),
+                    child:Text(
+                      'CREATE ACCOUNT',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color:Color(0xFF4B6600),
+                        letterSpacing: 1.4,
+                      ),
+                    )
+
+                  ),
                 )
 
               ],
