@@ -241,6 +241,21 @@ class MyApp extends StatelessWidget {
                      ),
                    ],
                  ),
+                    SizedBox(height: 8),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('Already have an account?'),
+                        SizedBox(width: 4),
+                        Text('Sign In',
+                          style: TextStyle(
+                            color:Color(0xFF003461),
+                              fontWeight: FontWeight(700),
+                          ),
+
+                        )
+                      ],
+                    )
 
 
                   ],
