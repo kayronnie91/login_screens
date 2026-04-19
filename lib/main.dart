@@ -146,7 +146,7 @@ class MyApp extends StatelessWidget {
                     ),
                     SizedBox(height: 24),
 
-                    // THIS IS WHERE WE PUT THE BUTTON //
+                    // THIS IS WHERE WE PUT THE GOOGLE BUTTON //
                     ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           minimumSize: Size(double.infinity,56),
@@ -184,34 +184,33 @@ class MyApp extends StatelessWidget {
 
                     // This is where I'll put the row with buttons //
 
-                    Row(
-                      children: [
-                        ElevatedButton(
-                          onPressed: (){},
-                            style: ElevatedButton.styleFrom(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.zero,
-                              )
-                            ),
-                          child:Padding(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal:23,
-                                vertical: 12,
-                            ),
-                            child: Row(
-                              children: [
-                                Icon(Icons.person_sharp),
-                                SizedBox(width:12),
-                                Text('Google'),
-                              ],
-                            ),
-                          )
-                        ),
-                      ],
-                    ),
-                    Row(
+                 Row(   // This is the row holding the buttons //
+                   children: [
+                     FilledButton(
+                       onPressed: (){},
+                         style: OutlinedButton.styleFrom(
+                           backgroundColor: Colors.white,
+                           shape:RoundedRectangleBorder(
+                             borderRadius: BorderRadiusGeometry.zero,
+                           ),
+                         ),
+                       child:Row(
+                         children: [
+                           Icon(Icons.manage_accounts,
+                           color:Colors.black,
+                           ),
+                           SizedBox(width: 12),
+                           Text('Google',
+                           style:TextStyle(
+                             color:Colors.black,
+                           )
+                           ),
+                         ],
+                       )
+                     )
+                   ],
+                 )
 
-                    )
 
             
 
