@@ -102,25 +102,60 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 24),
+                ElevatedButton(
+                  onPressed: (){},
+                    style:ElevatedButton.styleFrom(
+                      backgroundColor: Color(0xFFEAFFB8),
+                      elevation: 8,
+                      minimumSize: Size(double.infinity,60),
+                    ),
+                  child:Text(
+                    'CREATE ACCOUNT',
+                    style: TextStyle(
+                      fontSize: 18,
+                      color:Color(0xFF4B6600),
+                      letterSpacing: 1.4,
+                    ),
+                  )
+                ),
+                SizedBox(height: 32),
                 Center(
-                  child: ElevatedButton(
-                    onPressed: (){},
-                      style:ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xFFEAFFB8),
-                        elevation: 8,
-                        minimumSize: Size(double.infinity,60),
+                  child: Text('OR SIGN UP WITH',
+                  style: TextStyle(
+                    color:Color(0xFFABABA6),
+                    fontSize: 12,
+                    letterSpacing: 1.5,
+                  ),
+                  ),
+                ),
+                SizedBox(height: 24),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: 64,
+                      width:64,
+                      child:Icon(Icons.mail),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(60),
+                        color: Color(0xFF1E201C),
                       ),
-                    child:Text(
-                      'CREATE ACCOUNT',
-                      style: TextStyle(
-                        fontSize: 18,
-                        color:Color(0xFF4B6600),
-                        letterSpacing: 1.4,
+                    ),
+                    SizedBox(width: 20),
+                    Container(
+                      height: 64,
+                      width:64,
+                      child:Icon(Icons.phone),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(60),
+                        color: Color(0xFF1E201C),
+
                       ),
                     )
 
-                  ),
+                  ],
                 )
+
 
               ],
 
