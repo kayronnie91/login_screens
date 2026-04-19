@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -49,7 +47,7 @@ class MyApp extends StatelessWidget {
 
         body: Padding( // This is the padding on the body so that we can push the container holding the column inside //
           padding: const EdgeInsets.symmetric(
-            horizontal: 24,
+            horizontal: 27,
             vertical: 27,
           ),
           child: SingleChildScrollView(
@@ -184,35 +182,66 @@ class MyApp extends StatelessWidget {
 
                     // This is where I'll put the row with buttons //
 
-                 Row(   // This is the row holding the buttons //
+                 Row(// This is the row holding the buttons //
+                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                    children: [
                      FilledButton(
                        onPressed: (){},
                          style: OutlinedButton.styleFrom(
                            backgroundColor: Colors.white,
                            shape:RoundedRectangleBorder(
-                             borderRadius: BorderRadiusGeometry.zero,
+                             borderRadius: BorderRadiusGeometry.circular(10),
                            ),
                          ),
+
+                         // FIRST GOOGLE BUTTON//
+
                        child:Row(
                          children: [
                            Icon(Icons.manage_accounts,
-                           color:Colors.black,
+                           color:Color(0xFF003461),
+                             size:18,
                            ),
                            SizedBox(width: 12),
                            Text('Google',
                            style:TextStyle(
+                             fontSize: 14,
                              color:Colors.black,
                            )
                            ),
                          ],
                        )
-                     )
+                     ),
+
+                     //Second (LinkedIn) Button //
+
+                     FilledButton(
+                         onPressed:(){},
+                         style:FilledButton.styleFrom(
+                           backgroundColor: Colors.white,
+                           shape: RoundedRectangleBorder(
+                             borderRadius: BorderRadiusGeometry.circular(10),
+                           ),
+                         ),
+                         child: Row(
+                           children: [
+                             Icon(Icons.work,
+                             size:19,
+                             color:Color(0xFF003461),
+                             ),
+                             SizedBox(width:12),
+                             Text('LinkedIn',
+                             style: TextStyle(
+                               fontSize: 14,
+                               color:Colors.black,
+                             ),
+                             )
+                           ],
+                         )
+                     ),
                    ],
-                 )
+                 ),
 
-
-            
 
                   ],
                 ),
