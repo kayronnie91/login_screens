@@ -155,12 +155,15 @@ class MyApp extends StatelessWidget {
                                 width:48, height: 48),
                                 SizedBox(width:12),
 
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text('Barbell Bench Press', style:TextStyle(color:Colors.white, fontSize: 16)),
-                                    Text('Chest * Compund',style: TextStyle(color:Colors.white24),),
-                                  ],
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text('Barbell Bench Press', style:TextStyle(color:Colors.white, fontSize: 16)),
+                                      Text('Chest * Compund',style: TextStyle(color:Colors.white24),),
+                                    ],
+                                  ),
                                 ),
                                 Spacer(),
                                 Icon(Icons.close, color: Colors.white,)
@@ -170,7 +173,7 @@ class MyApp extends StatelessWidget {
                         ],
                       ),
                         decoration: BoxDecoration(color: Color(0xFF121411), borderRadius: BorderRadius.circular(12),
-                    )
+                    ),
                     ),
                   )
 
