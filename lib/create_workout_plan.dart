@@ -90,38 +90,35 @@ class MyApp extends StatelessWidget {
                               ),
                             ),
                             SizedBox(height: 8),
-                            Padding(
-                              padding: const EdgeInsets.all(16.0),
-                              child: Row(
-                                children: [
-                                  Expanded(child:
-                                 TextFormField(
-                                   style:TextStyle(color:Colors.grey, fontSize: 16),
-                                   decoration: InputDecoration(
-                                     fillColor: Colors.black12,
-                                     filled: true,
-                                     border: OutlineInputBorder(
-                                       borderRadius: BorderRadius.circular(10),
-                                     )
-                                   ),
+                            Row(
+                              children: [
+                                Expanded(child:
+                               TextFormField(
+                                 style:TextStyle(color:Colors.grey, fontSize: 16),
+                                 decoration: InputDecoration(
+                                   fillColor: Colors.black12,
+                                   filled: true,
+                                   border: OutlineInputBorder(
+                                     borderRadius: BorderRadius.circular(10),
+                                   )
                                  ),
-                                  ),
+                               ),
+                                ),
 
-                                  SizedBox(width:15),
+                                SizedBox(width:15),
 
-                                  Expanded(
-                                    child: TextFormField(
-                                      style:TextStyle(color:Colors.grey, fontSize: 16),
-                                      decoration: InputDecoration(
-                                        fillColor: Colors.black12,
-                                        border: OutlineInputBorder(
-                                          borderRadius: BorderRadius.circular(10),
-                                        )
-                                      ),
+                                Expanded(
+                                  child: TextFormField(
+                                    style:TextStyle(color:Colors.grey, fontSize: 16),
+                                    decoration: InputDecoration(
+                                      fillColor: Colors.black12,
+                                      border: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(10),
+                                      )
                                     ),
-                                  )
-                                ],
-                              ),
+                                  ),
+                                )
+                              ],
                             ),
                           ],
                         ),
@@ -138,15 +135,42 @@ class MyApp extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: 16),
-                  Container(
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            Icon(Icons.menu_outlined, color:Colors.white),
-                          ],
-                        )
-                      ],
+
+
+                  // STARTING SECOND CARD //
+
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Container(
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Icon(Icons.menu_outlined, color:Colors.white),
+                                SizedBox(width:12),
+                                Image.asset('images/bench_press.jpeg',
+                                width:48, height: 48),
+                                SizedBox(width:12),
+
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text('Barbell Bench Press', style:TextStyle(color:Colors.white, fontSize: 16)),
+                                    Text('Chest * Compund',style: TextStyle(color:Colors.white24),),
+                                  ],
+                                ),
+                                Spacer(),
+                                Icon(Icons.close, color: Colors.white,)
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                        decoration: BoxDecoration(color: Color(0xFF121411), borderRadius: BorderRadius.circular(12),
+                    )
                     ),
                   )
 
