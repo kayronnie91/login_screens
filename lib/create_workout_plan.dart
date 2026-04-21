@@ -151,7 +151,7 @@ class MyApp extends StatelessWidget {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
-                                Icon(Icons.menu_outlined, color:Colors.white),
+                                Icon(Icons.menu_outlined, color:Colors.white, size:16),
                                 SizedBox(width:12),
                                 Image.asset('images/bench_press.jpeg',
                                 width:48, height: 48),
@@ -185,20 +185,38 @@ class MyApp extends StatelessWidget {
                                 Divider(thickness: 0.3, endIndent: 20, indent: 20,),
                                 Row(
                                   children: [
-                                    Text('1', style: TextStyle(fontSize: 18, color: Colors.white),),
+                                    Text('1', style: TextStyle(fontSize: 14, color: Colors.white),),
                                     SizedBox(width: 8),
-                                    Expanded(
+                                    SizedBox(
+                                      width: 64,
+                                      height:28,
                                       child: TextFormField(
                                         style:TextStyle(color:Colors.white),
                                         decoration: InputDecoration(
                                           fillColor: Colors.black,
                                           filled: true,
                                           border: OutlineInputBorder(
-                                            borderRadius: BorderRadius.circular(12)
+                                            borderRadius: BorderRadius.zero,
                                           ),
                                           labelText:'8')
                                       ),
                                     ),
+                                    SizedBox(
+                                      width:64,
+                                      height: 28,
+                                      child: TextFormField(
+                                        style:TextStyle(color:Colors.white),
+                                        decoration: InputDecoration(
+                                          fillColor: Colors.black,
+                                          filled:true,
+                                          border: OutlineInputBorder(
+                                            borderRadius: BorderRadius.zero,
+                                          ),
+                                          labelText: '75',
+                                        ),
+                                      ),
+                                    ),
+                                    Text('%', style: TextStyle(fontSize: 12, color: Colors.white)),
                                   ],
                                 )
                               ],
