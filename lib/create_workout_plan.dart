@@ -155,20 +155,34 @@ class MyApp extends StatelessWidget {
                                 width:48, height: 48),
                                 SizedBox(width:12),
 
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text('Barbell Bench Press', style:TextStyle(color:Colors.white, fontSize: 16)),
-                                      Text('Chest * Compund',style: TextStyle(color:Colors.white24),),
-                                    ],
-                                  ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text('Barbell Bench Press', style:TextStyle(color:Colors.white, fontSize: 16)),
+                                    Text('Chest * Compund',style: TextStyle(color:Colors.white24),),
+                                  ],
                                 ),
                                 Spacer(),
                                 Icon(Icons.close, color: Colors.white,)
                               ],
                             ),
+                          ),
+                          Container(
+                            child:Column(
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                  children: [
+                                    Text('SET', style: TextStyle(color:Colors.white24),),
+                                    Text('REPS',style: TextStyle(color:Colors.white24),),
+                                    Text('TARGET LOAD',style: TextStyle(color:Colors.white24),),
+                                    Text('ACTION',style: TextStyle(color:Colors.white24),),
+                                  ],
+                                )
+                              ],
+                            ),
+                            decoration: BoxDecoration(color: Color(0xFF181A17)),
+
                           )
                         ],
                       ),
