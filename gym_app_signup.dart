@@ -138,22 +138,22 @@ class MyApp extends StatelessWidget {
                     Container(
                       height: 64,
                       width:64,
-                      child:Icon(Icons.mail),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(60),
                         color: Color(0xFF1E201C),
                       ),
+                      child:Icon(Icons.mail),
                     ),
                     SizedBox(width: 20),
                     Container(
                       height: 64,
                       width:64,
-                      child:Icon(Icons.phone),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(60),
                         color: Color(0xFF1E201C),
 
                       ),
+                      child:Icon(Icons.phone),
                     )
 
                   ],

@@ -142,6 +142,8 @@ class MyApp extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: Container(
+                      decoration: BoxDecoration(color: Color(0xFF121411), borderRadius: BorderRadius.circular(12),
+                    ),
                       child: Column(
                         children: [
                           Padding(
@@ -168,6 +170,7 @@ class MyApp extends StatelessWidget {
                             ),
                           ),
                           Container(
+                            decoration: BoxDecoration(color: Color(0xFF181A17)),
                             child:Column(
                               children: [
                                 Row(
@@ -178,16 +181,31 @@ class MyApp extends StatelessWidget {
                                     Text('TARGET LOAD',style: TextStyle(color:Colors.white24),),
                                     Text('ACTION',style: TextStyle(color:Colors.white24),),
                                   ],
+                                ),
+                                Divider(thickness: 0.3, endIndent: 20, indent: 20,),
+                                Row(
+                                  children: [
+                                    Text('1', style: TextStyle(fontSize: 18, color: Colors.white),),
+                                    SizedBox(width: 8),
+                                    Expanded(
+                                      child: TextFormField(
+                                        style:TextStyle(color:Colors.white),
+                                        decoration: InputDecoration(
+                                          fillColor: Colors.black,
+                                          filled: true,
+                                          border: OutlineInputBorder(
+                                            borderRadius: BorderRadius.circular(12)
+                                          ),
+                                          labelText:'8')
+                                      ),
+                                    ),
+                                  ],
                                 )
                               ],
                             ),
-                            decoration: BoxDecoration(color: Color(0xFF181A17)),
-
                           )
                         ],
                       ),
-                        decoration: BoxDecoration(color: Color(0xFF121411), borderRadius: BorderRadius.circular(12),
-                    ),
                     ),
                   )
 
