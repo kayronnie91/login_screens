@@ -267,7 +267,6 @@ class MyApp extends StatelessWidget {
                                                 ],
                                               ),
                                             ),
-
                                       ],
                                     ),
                                   )
@@ -278,7 +277,21 @@ class MyApp extends StatelessWidget {
                         ],
                       ),
                     ),
-                  )
+                  ),
+
+                  // END OF SECOND CARD //
+                  SizedBox(height:30),
+
+                  // START OF BUTTON
+                  Center(
+                    child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.greenAccent.shade700,
+                        ),
+                        onPressed:(){},
+                        child: Text('START WORKOUT'),
+                    ),
+                  ),
 
                 ],
               ),
