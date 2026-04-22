@@ -157,6 +157,7 @@ class MyApp extends StatelessWidget {
                                 width:48, height: 48),
                                 SizedBox(width:12),
 
+
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
@@ -169,57 +170,81 @@ class MyApp extends StatelessWidget {
                               ],
                             ),
                           ),
-                          Container(
-                            decoration: BoxDecoration(color: Color(0xFF181A17)),
-                            child:Column(
-                              children: [
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                  children: [
-                                    Text('SET', style: TextStyle(color:Colors.white24),),
-                                    Text('REPS',style: TextStyle(color:Colors.white24),),
-                                    Text('TARGET LOAD',style: TextStyle(color:Colors.white24),),
-                                    Text('ACTION',style: TextStyle(color:Colors.white24),),
-                                  ],
-                                ),
-                                Divider(thickness: 0.3, endIndent: 20, indent: 20,),
-                                Row(
-                                  children: [
-                                    Text('1', style: TextStyle(fontSize: 14, color: Colors.white),),
-                                    SizedBox(width: 8),
-                                    SizedBox(
-                                      width: 64,
-                                      height:28,
-                                      child: TextFormField(
-                                        style:TextStyle(color:Colors.white),
-                                        decoration: InputDecoration(
-                                          fillColor: Colors.black,
-                                          filled: true,
-                                          border: OutlineInputBorder(
-                                            borderRadius: BorderRadius.zero,
-                                          ),
-                                          labelText:'8')
-                                      ),
+
+                          // SETS REPS TARGET LOAD ACTION
+
+
+                          Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            child: Container(
+                              decoration: BoxDecoration(color: Color(0xFF181A17)),
+                              child:Column(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.all(12.0),
+                                    child: Row(
+                                      children: [
+                                        SizedBox(
+                                          child:Row(
+                                            children:[
+                                        Text('SET', style: TextStyle(color:Colors.white24),),
+                                        Text('REPS',style: TextStyle(color:Colors.white24),),
+                                            ])),
+                                        SizedBox(
+                                          child:Row(
+                                            children: [
+                                        Text('TARGET LOAD',style: TextStyle(color:Colors.white24),),
+                                        Text('ACTION',style: TextStyle(color:Colors.white24),),
+                                            ])),
+                                      ],
                                     ),
-                                    SizedBox(
-                                      width:64,
-                                      height: 28,
-                                      child: TextFormField(
-                                        style:TextStyle(color:Colors.white),
-                                        decoration: InputDecoration(
-                                          fillColor: Colors.black,
-                                          filled:true,
-                                          border: OutlineInputBorder(
-                                            borderRadius: BorderRadius.zero,
-                                          ),
-                                          labelText: '75',
+                                  ),
+                                  Divider(thickness: 0.3, endIndent: 20, indent: 20,),
+
+                                  // SECOND ROW OF SECOND CARD
+
+                                  Padding(
+                                    padding: const EdgeInsets.all(12.0),
+                                    child: Row(
+                                      children: [
+                                        Expanded(child: SizedBox(width:10, child: Text('1', style: TextStyle(fontSize: 14, color: Colors.white),))),
+                                        Row(
+                                          children: [
+                                            SizedBox(width:64, height:28,
+                                              child: TextFormField(
+                                                style:TextStyle(color:Colors.white),
+                                                decoration: InputDecoration(
+                                                  fillColor: Colors.black,
+                                                  filled: true,
+                                                  border: OutlineInputBorder(
+                                                    borderRadius: BorderRadius.zero,
+                                                  ),
+                                                  labelText:'8')
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              width:64,
+                                              height: 28,
+                                              child: TextFormField(
+                                                style:TextStyle(color:Colors.white),
+                                                decoration: InputDecoration(
+                                                  fillColor: Colors.black,
+                                                  filled:true,
+                                                  border: OutlineInputBorder(
+                                                    borderRadius: BorderRadius.zero,
+                                                  ),
+                                                  labelText: '75',
+                                                ),
+                                              ),
+                                            ),
+                                          ],
                                         ),
-                                      ),
+                                        Expanded(child: SizedBox(width:40,child: Text('%', style: TextStyle(fontSize: 12, color: Colors.white)))),
+                                      ],
                                     ),
-                                    Text('%', style: TextStyle(fontSize: 12, color: Colors.white)),
-                                  ],
-                                )
-                              ],
+                                  )
+                                ],
+                              ),
                             ),
                           )
                         ],
