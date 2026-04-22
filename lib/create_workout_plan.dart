@@ -212,41 +212,62 @@ class MyApp extends StatelessWidget {
 
                                   Padding(
                                     padding: const EdgeInsets.all(12.0),
-                                    child: Row(
-                                      children: [
-                                        Expanded(child: SizedBox(width:10, child: Text('1', style: TextStyle(fontSize: 14, color: Colors.white),))),
-                                        Row(
-                                          children: [
-                                            SizedBox(width:64, height:28,
-                                              child: TextFormField(
-                                                style:TextStyle(color:Colors.white),
-                                                decoration: InputDecoration(
-                                                  fillColor: Colors.black,
-                                                  filled: true,
-                                                  border: OutlineInputBorder(
-                                                    borderRadius: BorderRadius.zero,
-                                                  ),
-                                                  labelText:'8')
-                                              ),
-                                            ),
-                                            SizedBox(
-                                              width:64,
-                                              height: 28,
-                                              child: TextFormField(
-                                                style:TextStyle(color:Colors.white),
-                                                decoration: InputDecoration(
-                                                  fillColor: Colors.black,
-                                                  filled:true,
-                                                  border: OutlineInputBorder(
-                                                    borderRadius: BorderRadius.zero,
-                                                  ),
-                                                  labelText: '75',
+                                    child: Row( // Main row holding what is inside
+                                      children: [ // children of the main row
+                                        Expanded(
+                                          flex: 2,
+                                          child: Row( // child 1 of the main row
+                                            children: [ // grouped number 1 and first form field
+                                              SizedBox(width:28, child: Text('1', style: TextStyle(fontSize: 14, color: Colors.white),)),
+                                              SizedBox(width: 10),
+
+
+                                              SizedBox(width: 68,
+                                                child: TextFormField(
+                                                  initialValue: '8',
+                                                  textAlign: TextAlign.center,
+                                                  style:TextStyle(color:Colors.white),
+                                                  decoration: InputDecoration(
+                                                    fillColor: Colors.black,
+                                                    filled: true,
+                                                    border: OutlineInputBorder(
+                                                      borderRadius: BorderRadius.zero,
+                                                    ),
+                                                  )
                                                 ),
                                               ),
-                                            ),
-                                          ],
+                                            ]
+                                          ),
                                         ),
-                                        Expanded(child: SizedBox(width:40,child: Text('%', style: TextStyle(fontSize: 12, color: Colors.white)))),
+
+
+                                            SizedBox(width: 20,), // separated the child row
+
+
+                                            Expanded(
+                                              flex:3,
+                                              child: Row( // second child row holding second input field and % symbol
+                                                children: [
+                                                  SizedBox(width: 68,
+                                                    child: TextFormField(
+                                                      initialValue: '75',
+                                                      textAlign: TextAlign.center,
+                                                      style:TextStyle(color:Colors.white),
+                                                      decoration: InputDecoration(
+                                                        fillColor: Colors.black,
+                                                        filled:true,
+                                                        border: OutlineInputBorder(
+                                                          borderRadius: BorderRadius.zero,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  SizedBox(width: 10),
+                                                  SizedBox(width:10,child: Text('%', style: TextStyle(fontSize: 12, color: Colors.white))),
+                                                ],
+                                              ),
+                                            ),
+
                                       ],
                                     ),
                                   )
