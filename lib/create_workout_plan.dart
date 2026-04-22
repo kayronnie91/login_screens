@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const WorkoutApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class WorkoutApp extends StatefulWidget {
+  const WorkoutApp({super.key});
+
+  @override
+  State<WorkoutApp> createState() => _WorkoutAppState();
+}
+
+class _WorkoutAppState extends State<WorkoutApp> {
+  Color buttonColor = Colors.greenAccent;
 
   @override
   Widget build(BuildContext context) {
@@ -286,9 +293,18 @@ class MyApp extends StatelessWidget {
                   Center(
                     child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.greenAccent.shade700,
+                          backgroundColor: buttonColor,
                         ),
-                        onPressed:(){},
+                        onPressed:(){
+                          setState(() {
+                            if (buttonColor == Colors.greenAccent){
+                              buttonColor = Colors.white;
+                            }
+                            else {
+                            buttonColor = Colors.greenAccent;}
+                          }
+                          );
+                        },
                         child: Text('START WORKOUT'),
                     ),
                   ),
