@@ -184,18 +184,25 @@ class MyApp extends StatelessWidget {
                                     padding: const EdgeInsets.all(12.0),
                                     child: Row(
                                       children: [
-                                        SizedBox(
-                                          child:Row(
+                                        Expanded(
+                                          flex:2,
+                                          child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                             children:[
-                                        Text('SET', style: TextStyle(color:Colors.white24),),
-                                        Text('REPS',style: TextStyle(color:Colors.white24),),
-                                            ])),
-                                        SizedBox(
-                                          child:Row(
+                                              Text('SET', style: TextStyle(color:Colors.white24),),
+                                              Text('REPS',style: TextStyle(color:Colors.white24),),
+                                            ]),
+                                        ),
+                                        SizedBox(width:30),
+                                        Expanded(
+                                          flex:3,
+                                          child: Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                             children: [
-                                        Text('TARGET LOAD',style: TextStyle(color:Colors.white24),),
-                                        Text('ACTION',style: TextStyle(color:Colors.white24),),
-                                            ])),
+                                              Text('TARGET LOAD',style: TextStyle(color:Colors.white24),),
+                                              Text('ACTION',style: TextStyle(color:Colors.white24),),
+                                            ]),
+                                        ),
                                       ],
                                     ),
                                   ),
