@@ -60,53 +60,63 @@ class _UserProfileState extends State<UserProfile> {
 
                 Row(
                   children: [
-                    Container( // left card container
-                      padding: EdgeInsets.all(20),
-                      decoration: BoxDecoration(color:Color(0xFF121411)),
-                      child:Column(
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('WORKOUTS', style: TextStyle(fontFamily: 'Grotesk', letterSpacing: 1.4, color:Color(0xFFABABA6)),),
-                              Text('COMPLETE',style: TextStyle(fontFamily: 'Grotesk', letterSpacing: 1.4, color:Color(0xFFABABA6)),),
-                            ],
-                          ),
-                          SizedBox(height: 10),
-                          Row(
-                            children: [
-                              Text('342', style: TextStyle(color:Color(0xFFEAFFB8), fontSize: 32, fontFamily: 'Lexend', fontWeight: FontWeight(800)),),
-                              SizedBox(width: 7),
-                              (Image.asset('icons/dumbell.png'
-                                  , height: 32, width: 32)),
-                            ],
-                          ),
-                        ],
-                      )
+                    Expanded(
+                      child: Container( // left card container
+                        padding: EdgeInsets.all(20),
+                        decoration: BoxDecoration(color:Color(0xFF121411)),
+                        child:Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('WORKOUTS', style: TextStyle(fontFamily: 'Grotesk', letterSpacing: 1.4, color:Color(0xFFABABA6)),),
+                                Text('COMPLETE',style: TextStyle(fontFamily: 'Grotesk', letterSpacing: 1.4, color:Color(0xFFABABA6)),),
+                              ],
+                            ),
+                            SizedBox(height: 10),
+                            Row(
+                              children: [
+                                Text('342', style: TextStyle(color:Color(0xFFEAFFB8), fontSize: 32, fontFamily: 'Lexend', fontWeight: FontWeight(800)),),
+                                SizedBox(width: 7),
+                                (Image.asset('icons/dumbell.png'
+                                    , height: 32, width: 32)),
+                              ],
+                            ),
+                          ],
+                        )
+                      ),
                     ),
-                    SizedBox(width: 20),
-                    Container(
-                      padding: EdgeInsets.all(20),
-                      decoration: BoxDecoration(color:Color(0xFF121411)),
-                      child: Column(
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('TOTAL VOLUME',style: TextStyle(fontFamily: 'Grotesk', letterSpacing: 1.4, color:Color(0xFFABABA6)),),
-                              Text('(LBS)',style: TextStyle(fontFamily: 'Grotesk', letterSpacing: 1.4, color:Color(0xFFABABA6)),),
-                            ],
-                          ),
-                          SizedBox(height: 10),
-                          Row(
-                            children: [
-                              Text('1.2M', style: TextStyle(color:Color(0xFFFF7351), fontSize: 32, fontWeight: FontWeight(800), fontFamily: 'Lexend')),
-                              SizedBox(width: 7),
-                              Icon(Icons.scale, size:22, color: Color(0xFFABABA6),)
-                            ],
 
-                          ),
-                        ],
+
+                    SizedBox(width: 20),
+
+
+                    Expanded(
+                      child: Container( // right card container
+                        padding: EdgeInsets.all(20),
+                        decoration: BoxDecoration(color:Color(0xFF121411)),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('TOTAL VOLUME',style: TextStyle(fontFamily: 'Grotesk', letterSpacing: 1.4, color:Color(0xFFABABA6)),),
+                                Text('(LBS)',style: TextStyle(fontFamily: 'Grotesk', letterSpacing: 1.4, color:Color(0xFFABABA6)),),
+                              ],
+                            ),
+                            SizedBox(height: 10),
+                            Row(
+                              children: [
+                                Text('1.2M', style: TextStyle(color:Color(0xFFFF7351), fontSize: 32, fontWeight: FontWeight(800), fontFamily: 'Lexend')),
+                                SizedBox(width: 7),
+                                Icon(Icons.scale, size:20, color: Color(0xFFABABA6),)
+                              ],
+
+                            ),
+                          ],
+                        ),
                       ),
                     )
                   ],
