@@ -57,6 +57,7 @@ flutter:
     - images/sign_up.jpg
     - images/avatar_photo.jpg
     - images/bench_press.jpeg
+    - icons/dumbell.png
 
   fonts:
     - family: Lexend
