@@ -120,11 +120,41 @@ class _UserProfileState extends State<UserProfile> {
                       ),
                     )
                   ],
+                ),
+
+                SizedBox(height: 40),
+                SizedBox(
+                  child: Text('PHYSICAL STATS', style: TextStyle(fontSize: 20, color: Color(0xFFFDFCF7), fontFamily: 'Lexend'),),
+                ),
+                SizedBox(height: 24),
+                Container(
+                  decoration: BoxDecoration(color:Color(0x181A17)),
+                  padding: EdgeInsets.all(24),
+                  child:Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('CURRENT',style: TextStyle(fontFamily: 'Grotesk', letterSpacing: 1.4, color:Color(0xFFABABA6)),),
+                          Text('WEIGHT', style: TextStyle(fontFamily: 'Grotesk', letterSpacing: 1.4, color:Color(0xFFABABA6)),),
+                        ],
+                      ),
+                      SizedBox(height: 8),
+                      Row(
+                        children: [
+                          Text('185', style: TextStyle(fontSize: 32, color:Color(0xFFFDFCF7)),),
+                          SizedBox(width: 7),
+                          Text('lbs')
+                        ],
+                      ),
+                    ],
+                  )
                 )
 
-              ],
 
 
+              ], // END OF MAIN COLUMN HOLDING EVERYTHING
             ),
           )
       )
