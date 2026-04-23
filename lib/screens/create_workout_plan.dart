@@ -13,6 +13,7 @@ class WorkoutApp extends StatefulWidget {
 
 class _WorkoutAppState extends State<WorkoutApp> {
   Color buttonColor = Colors.greenAccent;
+  String startWorkout = 'START WORKOUT';
 
   @override
   Widget build(BuildContext context) {
@@ -299,13 +300,16 @@ class _WorkoutAppState extends State<WorkoutApp> {
                           setState(() {
                             if (buttonColor == Colors.greenAccent){
                               buttonColor = Colors.white;
+                              startWorkout = 'Lets do it';
                             }
                             else {
-                            buttonColor = Colors.greenAccent;}
+                            buttonColor = Colors.greenAccent;
+                            startWorkout = 'START WORKOUT';
+                            }
                           }
                           );
                         },
-                        child: Text('START WORKOUT'),
+                        child: Text(startWorkout),
                     ),
                   ),
 
