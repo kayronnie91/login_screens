@@ -18,6 +18,7 @@ class _UserProfileState extends State<UserProfile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFF000000),
       appBar: AppBar(
         backgroundColor: Color(0xFF121411),
         leading: Icon(Icons.menu_outlined, size: 24 ,color:Color(0xFF9CA3AF)),
@@ -33,6 +34,33 @@ class _UserProfileState extends State<UserProfile> {
           )
         ],
       ),
+      body: SafeArea(
+          child:Padding(
+            padding: const EdgeInsets.fromLTRB(24, 32, 24, 32),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    CircleAvatar(
+                      radius:48,
+                      child: Image.asset('images/sign_up.jpg'),
+                    ),
+                    SizedBox(width: 24),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children:[
+                        Text('ALEX CHEN', style:TextStyle(fontSize: 30, fontFamily: 'Lexend', color: Color(0xFFFDFCF7))),
+                        Text('ELITE MEMBER', style: TextStyle(fontSize: 14, fontFamily: 'Grotesk', color: Color(0xFFABABA6), letterSpacing: 1.4)),
+                      ]
+                    )
+                  ],
+                )
+              ],
+
+
+            ),
+          )
+      )
 
 
 
