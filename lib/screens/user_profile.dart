@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:workout_tracker/widgets/stat_card.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -108,6 +109,7 @@ class _UserProfileState extends State<UserProfile> {
                                 ],
                               ),
                               SizedBox(height: 10),
+
                               Row(
                                 children: [
                                   Text('1.2M', style: TextStyle(color:Color(0xFFFF7351), fontSize: 32, fontWeight: FontWeight(800), fontFamily: 'Lexend')),
@@ -137,57 +139,12 @@ class _UserProfileState extends State<UserProfile> {
                   Row(
                     children: [
                       Expanded(
-                        child: Container( // LEFT CARD
-                          decoration: BoxDecoration(color:Color(0xFF000000)),
-                          padding: EdgeInsets.all(24),
-                          child:Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text('CURRENT',style: TextStyle(fontFamily: 'Grotesk', letterSpacing: 1.4, color:Color(0xFFABABA6)),),
-                                  Text('WEIGHT', style: TextStyle(fontFamily: 'Grotesk', letterSpacing: 1.4, color:Color(0xFFABABA6)),),
-                                ],
-                              ),
-                              SizedBox(height: 8),
-                              Row(
-                                children: [
-                                  Text('185', style: TextStyle(fontSize: 32, color:Color(0xFFFDFCF7)),),
-                                  SizedBox(width: 7),
-                                  Text('lbs')
-                                ],
-                              ),
-                            ],
-                          )
-                        ),
+                        child: StatCard(title: 'CURRENT', subtitle: 'WEIGHT', value: '185', metric: 'LBS') // left card
                       ),
                       SizedBox(width:10),
         
                       Expanded(
-                        child: Container( // RIGHT CARD
-                            decoration: BoxDecoration(color:Color(0xFF000000)),
-                            padding: EdgeInsets.all(24),
-                            child:Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text('BODY FAT',style: TextStyle(fontFamily: 'Grotesk', letterSpacing: 1.4, color:Color(0xFFABABA6)),),
-                                  ],
-                                ),
-                                SizedBox(height: 28),
-                                Row(
-                                  children: [
-                                    Text('12.5', style: TextStyle(fontSize: 32, color:Color(0xFFFDFCF7)),),
-                                    SizedBox(width: 7),
-                                    Text('%')
-                                  ],
-                                ),
-                              ],
-                            )
-                        ),
+                        child: StatCard(title: 'BODY', subtitle: 'FAT', value: '12.5', metric: '%') // right card
                       ),
         
                     ],
