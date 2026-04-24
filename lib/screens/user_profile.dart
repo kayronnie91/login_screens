@@ -18,7 +18,7 @@ class _UserProfileState extends State<UserProfile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF000000),
+      backgroundColor: Color(0xFF121411),
       appBar: AppBar(
         backgroundColor: Color(0xFF121411),
         leading: Icon(Icons.menu_outlined, size: 24 ,color:Color(0xFF9CA3AF)),
@@ -127,29 +127,63 @@ class _UserProfileState extends State<UserProfile> {
                   child: Text('PHYSICAL STATS', style: TextStyle(fontSize: 20, color: Color(0xFFFDFCF7), fontFamily: 'Lexend'),),
                 ),
                 SizedBox(height: 24),
-                Container(
-                  decoration: BoxDecoration(color:Color(0x181A17)),
-                  padding: EdgeInsets.all(24),
-                  child:Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('CURRENT',style: TextStyle(fontFamily: 'Grotesk', letterSpacing: 1.4, color:Color(0xFFABABA6)),),
-                          Text('WEIGHT', style: TextStyle(fontFamily: 'Grotesk', letterSpacing: 1.4, color:Color(0xFFABABA6)),),
-                        ],
+                Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        decoration: BoxDecoration(color:Color(0xFF000000)),
+                        padding: EdgeInsets.all(24),
+                        child:Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('CURRENT',style: TextStyle(fontFamily: 'Grotesk', letterSpacing: 1.4, color:Color(0xFFABABA6)),),
+                                Text('WEIGHT', style: TextStyle(fontFamily: 'Grotesk', letterSpacing: 1.4, color:Color(0xFFABABA6)),),
+                              ],
+                            ),
+                            SizedBox(height: 8),
+                            Row(
+                              children: [
+                                Text('185', style: TextStyle(fontSize: 32, color:Color(0xFFFDFCF7)),),
+                                SizedBox(width: 7),
+                                Text('lbs')
+                              ],
+                            ),
+                          ],
+                        )
                       ),
-                      SizedBox(height: 8),
-                      Row(
-                        children: [
-                          Text('185', style: TextStyle(fontSize: 32, color:Color(0xFFFDFCF7)),),
-                          SizedBox(width: 7),
-                          Text('lbs')
-                        ],
+                    ),
+                    SizedBox(width:10),
+
+                    Expanded(
+                      child: Container(
+                          decoration: BoxDecoration(color:Color(0xFF000000)),
+                          padding: EdgeInsets.all(24),
+                          child:Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text('BODY FAT',style: TextStyle(fontFamily: 'Grotesk', letterSpacing: 1.4, color:Color(0xFFABABA6)),),
+                                ],
+                              ),
+                              SizedBox(height: 28),
+                              Row(
+                                children: [
+                                  Text('12.5', style: TextStyle(fontSize: 32, color:Color(0xFFFDFCF7)),),
+                                  SizedBox(width: 7),
+                                  Text('%')
+                                ],
+                              ),
+                            ],
+                          )
                       ),
-                    ],
-                  )
+                    ),
+
+                  ],
                 )
 
 
