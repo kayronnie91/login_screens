@@ -204,6 +204,12 @@ class _UserProfileState extends State<UserProfile> {
                       Text('VIEW ALL', style: TextStyle(fontSize: 12, fontFamily: 'Grotesk', color: Color(0xFFEAFFB8)),)
                     ],
                   ),
+
+                  //THIRD SECTION
+
+
+
+
         
         
         
