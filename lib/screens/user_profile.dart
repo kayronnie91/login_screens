@@ -34,131 +34,110 @@ class _UserProfileState extends State<UserProfile> {
           )
         ],
       ),
-      body: SafeArea(
-          child:Padding(
-            padding: const EdgeInsets.fromLTRB(24, 32, 24, 32),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    CircleAvatar(
-                      radius:48,
-                      child: Image.asset('images/sign_up.jpg'),
-                    ),
-                    SizedBox(width: 24),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children:[
-                        Text('ALEX CHEN', style:TextStyle(fontSize: 30, fontFamily: 'Lexend', color: Color(0xFFFDFCF7))),
-                        Text('ELITE MEMBER', style: TextStyle(fontSize: 14, fontFamily: 'Grotesk', color: Color(0xFFABABA6), letterSpacing: 1.4)),
-                      ]
-                    )
-                  ],
-                ),
-                SizedBox(height: 32),
-
-                Row(
-                  children: [
-                    Expanded(
-                      child: Container( // left card container
-                        padding: EdgeInsets.all(20),
-                        decoration: BoxDecoration(color:Color(0xFF121411)),
-                        child:Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text('WORKOUTS', style: TextStyle(fontFamily: 'Grotesk', letterSpacing: 1.4, color:Color(0xFFABABA6)),),
-                                Text('COMPLETE',style: TextStyle(fontFamily: 'Grotesk', letterSpacing: 1.4, color:Color(0xFFABABA6)),),
-                              ],
-                            ),
-                            SizedBox(height: 10),
-                            Row(
-                              children: [
-                                Text('342', style: TextStyle(color:Color(0xFFEAFFB8), fontSize: 32, fontFamily: 'Lexend', fontWeight: FontWeight(800)),),
-                                SizedBox(width: 7),
-                                (Image.asset('icons/dumbell.png'
-                                    , height: 32, width: 32)),
-                              ],
-                            ),
-                          ],
-                        )
+      body: SingleChildScrollView(
+        child: SafeArea(
+            child:Padding(
+              padding: const EdgeInsets.fromLTRB(24, 32, 24, 32),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      CircleAvatar(
+                        radius:48,
+                        child: Image.asset('images/sign_up.jpg'),
                       ),
-                    ),
-
-
-                    SizedBox(width: 20),
-
-
-                    Expanded(
-                      child: Container( // right card container
-                        padding: EdgeInsets.all(20),
-                        decoration: BoxDecoration(color:Color(0xFF121411)),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text('TOTAL VOLUME',style: TextStyle(fontFamily: 'Grotesk', letterSpacing: 1.4, color:Color(0xFFABABA6)),),
-                                Text('(LBS)',style: TextStyle(fontFamily: 'Grotesk', letterSpacing: 1.4, color:Color(0xFFABABA6)),),
-                              ],
-                            ),
-                            SizedBox(height: 10),
-                            Row(
-                              children: [
-                                Text('1.2M', style: TextStyle(color:Color(0xFFFF7351), fontSize: 32, fontWeight: FontWeight(800), fontFamily: 'Lexend')),
-                                SizedBox(width: 7),
-                                Icon(Icons.scale, size:20, color: Color(0xFFABABA6),)
-                              ],
-
-                            ),
-                          ],
+                      SizedBox(width: 24),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children:[
+                          Text('ALEX CHEN', style:TextStyle(fontSize: 30, fontFamily: 'Lexend', color: Color(0xFFFDFCF7))),
+                          Text('ELITE MEMBER', style: TextStyle(fontSize: 14, fontFamily: 'Grotesk', color: Color(0xFFABABA6), letterSpacing: 1.4)),
+                        ]
+                      )
+                    ],
+                  ),
+                  SizedBox(height: 32),
+        
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Container( // left card container
+                          padding: EdgeInsets.all(20),
+                          decoration: BoxDecoration(color:Color(0xFF121411)),
+                          child:Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text('WORKOUTS', style: TextStyle(fontFamily: 'Grotesk', letterSpacing: 1.4, color:Color(0xFFABABA6)),),
+                                  Text('COMPLETE',style: TextStyle(fontFamily: 'Grotesk', letterSpacing: 1.4, color:Color(0xFFABABA6)),),
+                                ],
+                              ),
+                              SizedBox(height: 10),
+                              Row(
+                                children: [
+                                  Text('342', style: TextStyle(color:Color(0xFFEAFFB8), fontSize: 32, fontFamily: 'Lexend', fontWeight: FontWeight(800)),),
+                                  SizedBox(width: 7),
+                                  (Image.asset('icons/dumbell.png'
+                                      , height: 32, width: 32)),
+                                ],
+                              ),
+                            ],
+                          )
                         ),
                       ),
-                    )
-                  ],
-                ),
-
-                SizedBox(height: 40),
-                SizedBox(
-                  child: Text('PHYSICAL STATS', style: TextStyle(fontSize: 20, color: Color(0xFFFDFCF7), fontFamily: 'Lexend'),),
-                ),
-                SizedBox(height: 24),
-                Row(
-                  children: [
-                    Expanded(
-                      child: Container(
-                        decoration: BoxDecoration(color:Color(0xFF000000)),
-                        padding: EdgeInsets.all(24),
-                        child:Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text('CURRENT',style: TextStyle(fontFamily: 'Grotesk', letterSpacing: 1.4, color:Color(0xFFABABA6)),),
-                                Text('WEIGHT', style: TextStyle(fontFamily: 'Grotesk', letterSpacing: 1.4, color:Color(0xFFABABA6)),),
-                              ],
-                            ),
-                            SizedBox(height: 8),
-                            Row(
-                              children: [
-                                Text('185', style: TextStyle(fontSize: 32, color:Color(0xFFFDFCF7)),),
-                                SizedBox(width: 7),
-                                Text('lbs')
-                              ],
-                            ),
-                          ],
-                        )
-                      ),
-                    ),
-                    SizedBox(width:10),
-
-                    Expanded(
-                      child: Container(
+        
+        
+                      SizedBox(width: 20),
+        
+        
+                      Expanded(
+                        child: Container( // right card container
+                          padding: EdgeInsets.all(20),
+                          decoration: BoxDecoration(color:Color(0xFF121411)),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text('TOTAL VOLUME',style: TextStyle(fontFamily: 'Grotesk', letterSpacing: 1.4, color:Color(0xFFABABA6)),),
+                                  Text('(LBS)',style: TextStyle(fontFamily: 'Grotesk', letterSpacing: 1.4, color:Color(0xFFABABA6)),),
+                                ],
+                              ),
+                              SizedBox(height: 10),
+                              Row(
+                                children: [
+                                  Text('1.2M', style: TextStyle(color:Color(0xFFFF7351), fontSize: 32, fontWeight: FontWeight(800), fontFamily: 'Lexend')),
+                                  SizedBox(width: 7),
+                                  Icon(Icons.scale, size:20, color: Color(0xFFABABA6),)
+                                ],
+        
+                              ),
+                            ],
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+        
+                  // PHYSICAL STATS
+        
+        
+                  SizedBox(height: 40),
+                  SizedBox(
+                    child: Text('PHYSICAL STATS', style: TextStyle(fontSize: 20, color: Color(0xFFFDFCF7), fontFamily: 'Lexend'),),
+                  ),
+                  SizedBox(height: 24),
+        
+                  // THIRD SECTION - STAT CARDS
+        
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Container( // LEFT CARD
                           decoration: BoxDecoration(color:Color(0xFF000000)),
                           padding: EdgeInsets.all(24),
                           child:Column(
@@ -167,30 +146,71 @@ class _UserProfileState extends State<UserProfile> {
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text('BODY FAT',style: TextStyle(fontFamily: 'Grotesk', letterSpacing: 1.4, color:Color(0xFFABABA6)),),
+                                  Text('CURRENT',style: TextStyle(fontFamily: 'Grotesk', letterSpacing: 1.4, color:Color(0xFFABABA6)),),
+                                  Text('WEIGHT', style: TextStyle(fontFamily: 'Grotesk', letterSpacing: 1.4, color:Color(0xFFABABA6)),),
                                 ],
                               ),
-                              SizedBox(height: 28),
+                              SizedBox(height: 8),
                               Row(
                                 children: [
-                                  Text('12.5', style: TextStyle(fontSize: 32, color:Color(0xFFFDFCF7)),),
+                                  Text('185', style: TextStyle(fontSize: 32, color:Color(0xFFFDFCF7)),),
                                   SizedBox(width: 7),
-                                  Text('%')
+                                  Text('lbs')
                                 ],
                               ),
                             ],
                           )
+                        ),
                       ),
-                    ),
-
-                  ],
-                )
-
-
-
-              ], // END OF MAIN COLUMN HOLDING EVERYTHING
-            ),
-          )
+                      SizedBox(width:10),
+        
+                      Expanded(
+                        child: Container( // RIGHT CARD
+                            decoration: BoxDecoration(color:Color(0xFF000000)),
+                            padding: EdgeInsets.all(24),
+                            child:Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text('BODY FAT',style: TextStyle(fontFamily: 'Grotesk', letterSpacing: 1.4, color:Color(0xFFABABA6)),),
+                                  ],
+                                ),
+                                SizedBox(height: 28),
+                                Row(
+                                  children: [
+                                    Text('12.5', style: TextStyle(fontSize: 32, color:Color(0xFFFDFCF7)),),
+                                    SizedBox(width: 7),
+                                    Text('%')
+                                  ],
+                                ),
+                              ],
+                            )
+                        ),
+                      ),
+        
+                    ],
+                  ),
+        
+                  SizedBox(height: 40),
+        
+                  // ACHIEVEMENTS
+        
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('ACHIEVEMENTS', style: TextStyle(fontSize: 20, fontFamily: 'Lexend', color: Color(0xFFFDFCF7)),),
+                      Text('VIEW ALL', style: TextStyle(fontSize: 12, fontFamily: 'Grotesk', color: Color(0xFFEAFFB8)),)
+                    ],
+                  ),
+        
+        
+        
+                ], // END OF MAIN COLUMN HOLDING EVERYTHING
+              ),
+            )
+        ),
       )
 
 
