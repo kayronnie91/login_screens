@@ -58,6 +58,10 @@ flutter:
     - images/avatar_photo.jpg
     - images/bench_press.jpeg
     - icons/dumbell.png
+    - icons/earlybird.png
+    - icons/library.png
+    - icons/profile.png
+    - icons/progress.png
 
   fonts:
     - family: Lexend
