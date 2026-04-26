@@ -195,46 +195,64 @@ class _UserProfileState extends State<UserProfile> {
             )
         ),
       ),
+
+      // BOTTOM NAV BAR
+
+
       bottomNavigationBar: Container(
         height: 87,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-            Column(
-              children: [
-                Image.asset('icons/dashboard.png', color: Color(0xFF6B7280),),
-                Text('DASHBOARD', style: TextStyle(color: Color(0xFF6B7280)),),
-              ],
-            ),
-            Column(
-              children: [
-                Image.asset('icons/dumbell.png',color: Color(0xFF6B7280)),
-                Text('TRAIN', style: TextStyle(color: Color(0xFF6B7280))),
-              ],
-
-            ),
-              Column(
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset('icons/library.png',color: Color(0xFF6B7280)),
-                  Text('LIBRARY', style: TextStyle(color: Color(0xFF6B7280))),
-                ],
-
-              ),
-              Column(
-                children: [
-                  Image.asset('icons/progress.png',color: Color(0xFF6B7280)),
-                  Text('PROGRESS', style: TextStyle(color: Color(0xFF6B7280))),
+                  Image.asset('icons/dashboard.png', height: 20,width: 20, color: Color(0xFF6B7280),),
+                  Text('DASHBOARD', style: TextStyle(color: Color(0xFF6B7280), fontSize: 11),),
                 ],
               ),
-              Column(
-                children: [
-                  Image.asset('icons/profile.png',color: Color(0xFF6B7280)),
-                  Text('PROFILE', style: TextStyle(color: Color(0xFF6B7280))),
-                ],
+            ),
 
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset('icons/dumbell.png',height: 20,width: 20,color: Color(0xFF6B7280)),
+                  Text('TRAIN', style: TextStyle(color: Color(0xFF6B7280),fontSize: 11)),
+                ],
+              ),
+            ),
+
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset('icons/library.png',height: 20,width: 20, color: Color(0xFF6B7280)),
+                    Text('LIBRARY', style: TextStyle(color: Color(0xFF6B7280),fontSize: 11)),
+                  ],
+                ),
+              ),
+
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset('icons/progress.png',height: 20,width: 20,color: Color(0xFF6B7280)),
+                    Text('PROGRESS', style: TextStyle(color: Color(0xFF6B7280), fontSize: 11)),
+                  ],
+                ),
+              ),
+
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset('icons/profile.png',height: 20,width: 20, color: Color(0xFFBFFF00)),
+                    Text('PROFILE', style: TextStyle(color: Color(0xFFBFFF00), fontSize: 11)),
+                  ],
+                ),
               )
 
             ]
