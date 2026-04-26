@@ -63,6 +63,7 @@ flutter:
     - icons/profile.png
     - icons/progress.png
     - icons/consistency.png
+    - icons/dashboard.png
 
   fonts:
     - family: Lexend

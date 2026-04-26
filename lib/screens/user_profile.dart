@@ -182,22 +182,48 @@ class _UserProfileState extends State<UserProfile> {
                   SizedBox(height: 48),
                   Column(
                     children: [
-                      SettingsCard(edgeicon: Icon(Icons.settings, size: 20, color: Color(0xFFABABA6),), heading: 'Account Settings', iconpath: Icon(Icons.navigate_next)),
-                      SettingsCard(edgeicon: Icon(Icons.notification_important_outlined, color: Color(0xFFABABA6)), heading: 'Notifications', iconpath: Icon(Icons.navigate_next)),
+                      SettingsCard(edgeicon: Icon(Icons.navigate_next, size: 22, color: Color(0xFFFDFCF7),), heading: 'Account Settings', iconpath: Icon(Icons.settings, size: 22,color: Color(0xFFABABA6))),
+                      SizedBox(height: 8),
+                      SettingsCard(edgeicon: Icon(Icons.navigate_next, size: 22,color: Color(0xFFFDFCF7)), heading: 'Notifications', iconpath: Icon(Icons.notification_important_outlined, size: 22,color: Color(0xFFABABA6))),
+                      SizedBox(height: 8),
+                      SettingsCard( heading: 'Notifications', iconpath: Icon(Icons.logout, size: 22,color: Color(0xFFFF7351))),
                     ],
-                  )
-
-
-
-
-        
+                  ),
+                  SizedBox(height: 32),
                 ], // END OF MAIN COLUMN HOLDING EVERYTHING
               ),
             )
         ),
-      )
+      ),
+      bottomNavigationBar: Container(
+        height: 87,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+          Column(
+            children: [
+              Image.asset('icons/dashboard.png', color: Color(0xFF6B7280),),
+              Text('DASHBOARD', style: TextStyle(color: Color(0xFF6B7280)),),
+            ],
+          ),
+          Column(
+            children: [
+              Image.asset('icons/dumbell.png',color: Color(0xFF6B7280)),
+              Text('TRAIN', style: TextStyle(color: Color(0xFF6B7280))),
+            ],
 
+          ),
+            Column(
+              children: [
+                Image.asset('icons/library.png',color: Color(0xFF6B7280)),
+                Text('LIBRARY', style: TextStyle(color: Color(0xFF6B7280))),
+              ],
 
+            )
+
+          ]
+        ),
+      ),
 
 
 

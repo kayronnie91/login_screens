@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 class SettingsCard extends StatelessWidget {
   final Icon iconpath;
   final String heading;
-  final Icon edgeicon;
+  final Icon? edgeicon;
 
 
-  const SettingsCard({required this.edgeicon, required this.heading, required this.iconpath,super.key});
+  const SettingsCard({ this.edgeicon, required this.heading, required this.iconpath,super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class SettingsCard extends StatelessWidget {
             SizedBox(width: 16),
             Text(heading, style: TextStyle(fontSize: 16, fontFamily: 'Manrope', color: Color(0xFFFDFCF7))),
             Spacer(),
-            edgeicon,
+            edgeicon ?? SizedBox(),
           ],
         ),
       ),
