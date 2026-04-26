@@ -197,31 +197,48 @@ class _UserProfileState extends State<UserProfile> {
       ),
       bottomNavigationBar: Container(
         height: 87,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-          Column(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset('icons/dashboard.png', color: Color(0xFF6B7280),),
-              Text('DASHBOARD', style: TextStyle(color: Color(0xFF6B7280)),),
-            ],
-          ),
-          Column(
-            children: [
-              Image.asset('icons/dumbell.png',color: Color(0xFF6B7280)),
-              Text('TRAIN', style: TextStyle(color: Color(0xFF6B7280))),
-            ],
-
-          ),
             Column(
               children: [
-                Image.asset('icons/library.png',color: Color(0xFF6B7280)),
-                Text('LIBRARY', style: TextStyle(color: Color(0xFF6B7280))),
+                Image.asset('icons/dashboard.png', color: Color(0xFF6B7280),),
+                Text('DASHBOARD', style: TextStyle(color: Color(0xFF6B7280)),),
+              ],
+            ),
+            Column(
+              children: [
+                Image.asset('icons/dumbell.png',color: Color(0xFF6B7280)),
+                Text('TRAIN', style: TextStyle(color: Color(0xFF6B7280))),
               ],
 
-            )
+            ),
+              Column(
+                children: [
+                  Image.asset('icons/library.png',color: Color(0xFF6B7280)),
+                  Text('LIBRARY', style: TextStyle(color: Color(0xFF6B7280))),
+                ],
 
-          ]
+              ),
+              Column(
+                children: [
+                  Image.asset('icons/progress.png',color: Color(0xFF6B7280)),
+                  Text('PROGRESS', style: TextStyle(color: Color(0xFF6B7280))),
+                ],
+              ),
+              Column(
+                children: [
+                  Image.asset('icons/profile.png',color: Color(0xFF6B7280)),
+                  Text('PROFILE', style: TextStyle(color: Color(0xFF6B7280))),
+                ],
+
+              )
+
+            ]
+          ),
         ),
       ),
 
