@@ -144,7 +144,7 @@ class _UserProfileState extends State<UserProfile> {
                       SizedBox(width:10),
         
                       Expanded(
-                        child: StatCard(title: 'BODY', subtitle: 'FAT', value: '12.5', metric: '%') // right card
+                        child: StatCard(title: 'BODY',subtitle: 'FAT', value: '12.5', metric: '%') // right card
                       ),
         
                     ],
@@ -167,8 +167,6 @@ class _UserProfileState extends State<UserProfile> {
 
 
 
-        
-        
         
                 ], // END OF MAIN COLUMN HOLDING EVERYTHING
               ),

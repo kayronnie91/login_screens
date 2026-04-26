@@ -9,8 +9,8 @@ class StatCard extends StatelessWidget {
   final String metric;
 
 
-  const StatCard(
-      {required this.title, required this.subtitle, required this.value, required this.metric, super.key});
+  StatCard(
+      {  required this.subtitle, required this.value, required this.metric, required this.title, super.key});
 
   @override
   Widget build(BuildContext context) {
