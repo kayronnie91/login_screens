@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:workout_tracker/widgets/stat_card.dart';
 import 'package:workout_tracker/widgets/achievements_card.dart';
+import 'package:workout_tracker/widgets/settings_card.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -180,23 +180,14 @@ class _UserProfileState extends State<UserProfile> {
                   ),
 
                   SizedBox(height: 48),
+                  Column(
+                    children: [
+                      SettingsCard(edgeicon: Icon(Icons.settings, size: 20, color: Color(0xFFABABA6),), heading: 'Account Settings', iconpath: Icon(Icons.navigate_next)),
+                      SettingsCard(edgeicon: Icon(Icons.notification_important_outlined, color: Color(0xFFABABA6)), heading: 'Notifications', iconpath: Icon(Icons.navigate_next)),
+                    ],
+                  )
 
-                  Container(
-                    decoration: BoxDecoration(color:Color(0xFF121411),
-                  ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Row(
-                        children: [
-                          Icon(Icons.settings, size: 20,color: Color(0xFFFDFCF7)),
-                          SizedBox(width: 16),
-                          Text('Account Settings', style: TextStyle(fontSize: 16, fontFamily: 'Manrope', color: Color(0xFFFDFCF7))),
-                          Spacer(),
-                          Icon(Icons.keyboard_arrow_right, size: 20, color: Color(0xFFFDFCF7)),
-                        ],
-                      ),
-                    ),
-                  ),
+
 
 
         
