@@ -144,7 +144,7 @@ class _UserProfileState extends State<UserProfile> {
                       Expanded(
                         child: StatCard(title: 'CURRENT', subtitle: 'WEIGHT', value: '185', metric: 'LBS') // left card
                       ),
-                      SizedBox(width:10),
+                      SizedBox(width:20),
         
                       Expanded(
                         child: StatCard(title: 'BODY',subtitle: 'FAT', value: '12.5', metric: '%') // right card
@@ -165,6 +165,8 @@ class _UserProfileState extends State<UserProfile> {
                     ],
                   ),
 
+                  SizedBox(height: 24),
+
                   //THIRD SECTION LIST VIEW
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
@@ -174,10 +176,27 @@ class _UserProfileState extends State<UserProfile> {
                         AchievementsCard(imagepath: 'icons/consistency.png', title: 'Consistency', subtitle: '30 Day Streak'),
                         AchievementsCard(imagepath: 'icons/progress.png', title: 'Progress', subtitle: '30% Improvement'),
                       ],
-                    
-                    
                     ),
-                  )
+                  ),
+
+                  SizedBox(height: 48),
+
+                  Container(
+                    decoration: BoxDecoration(color:Color(0xFF121411),
+                  ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Row(
+                        children: [
+                          Icon(Icons.settings, size: 20,color: Color(0xFFFDFCF7)),
+                          SizedBox(width: 16),
+                          Text('Account Settings', style: TextStyle(fontSize: 16, fontFamily: 'Manrope', color: Color(0xFFFDFCF7))),
+                          Spacer(),
+                          Icon(Icons.keyboard_arrow_right, size: 20, color: Color(0xFFFDFCF7)),
+                        ],
+                      ),
+                    ),
+                  ),
 
 
         
