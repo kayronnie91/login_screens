@@ -13,7 +13,7 @@ class AchievementsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(10.0),
       child: Container(
         height: 149,
           width: 128,

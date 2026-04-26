@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:workout_tracker/widgets/stat_card.dart';
+import 'package:workout_tracker/widgets/achievements_card.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -19,7 +21,8 @@ class _UserProfileState extends State<UserProfile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF121411),
+      backgroundColor: Color(0xFF000000),
+
       appBar: AppBar(
         backgroundColor: Color(0xFF121411),
         leading: Icon(Icons.menu_outlined, size: 24 ,color:Color(0xFF9CA3AF)),
@@ -163,9 +166,18 @@ class _UserProfileState extends State<UserProfile> {
                   ),
 
                   //THIRD SECTION LIST VIEW
-
-
-
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        AchievementsCard(imagepath: 'icons/earlybird.png', title: 'Early Bird', subtitle: '50 AM Workouts'),
+                        AchievementsCard(imagepath: 'icons/consistency.png', title: 'Consistency', subtitle: '30 Day Streak'),
+                        AchievementsCard(imagepath: 'icons/progress.png', title: 'Progress', subtitle: '30% Improvement'),
+                      ],
+                    
+                    
+                    ),
+                  )
 
 
         

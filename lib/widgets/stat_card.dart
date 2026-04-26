@@ -15,7 +15,7 @@ class StatCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container( // LEFT CARD
-        decoration: BoxDecoration(color: Color(0xFF000000)),
+        decoration: BoxDecoration(color: Color(0xFF121411)),
         padding: EdgeInsets.all(24),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
