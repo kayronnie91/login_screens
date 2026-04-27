@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:workout_tracker/widgets/stat_card.dart';
 import 'package:workout_tracker/widgets/achievements_card.dart';
 import 'package:workout_tracker/widgets/settings_card.dart';
+import 'package:workout_tracker/screens/create_workout_plan.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -216,12 +217,24 @@ class _UserProfileState extends State<UserProfile> {
             ),
 
             Expanded(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset('icons/dumbell.png',height: 20,width: 20,color: Color(0xFF6B7280)),
-                  Text('TRAIN', style: TextStyle(color: Color(0xFF6B7280),fontSize: 11)),
-                ],
+              child: GestureDetector(
+                onTap: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => WorkoutApp(),
+                  ),
+                  );
+
+                },
+
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset('icons/dumbell.png',height: 20,width: 20,color: Color(0xFF6B7280)),
+                    Text('TRAIN', style: TextStyle(color: Color(0xFF6B7280),fontSize: 11)),
+                  ],
+                ),
               ),
             ),
 

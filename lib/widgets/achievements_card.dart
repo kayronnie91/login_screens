@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 class AchievementsCard extends StatelessWidget {
 
   final String imagepath;

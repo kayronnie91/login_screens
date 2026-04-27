@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const WorkoutApp());
-}
 
 class WorkoutApp extends StatefulWidget {
   const WorkoutApp({super.key});
