@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:workout_tracker/screens/create_workout_plan.dart';
 import 'package:workout_tracker/screens/user_profile.dart';
 
 void main() {
@@ -12,7 +13,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: UserProfile(), // 👈 start here
+
+      home: CreateWorkoutPlan(), // 👈 start here
     );
   }
 }

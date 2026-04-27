@@ -1,60 +1,32 @@
 import 'package:flutter/material.dart';
 
 
-class WorkoutApp extends StatefulWidget {
-  const WorkoutApp({super.key});
+class CreateWorkoutPlan extends StatefulWidget {
+  const CreateWorkoutPlan({super.key});
 
   @override
-  State<WorkoutApp> createState() => _WorkoutAppState();
+  State<CreateWorkoutPlan> createState() => _CreateWorkoutPlanState();
 }
 
-class _WorkoutAppState extends State<WorkoutApp> {
+class _CreateWorkoutPlanState extends State<CreateWorkoutPlan> {
   Color buttonColor = Colors.greenAccent;
   String startWorkout = 'START WORKOUT';
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home:Scaffold(
+    return Scaffold(
         backgroundColor: Colors.black,
-        appBar: AppBar(
-          backgroundColor: Colors.black,
-          leading: Icon(Icons.menu, color: Colors.greenAccent,),
-          centerTitle: true,
-          title: Text('VELOCITY', style: TextStyle(color: Colors.greenAccent.shade700, fontWeight: FontWeight(800))),
-          actions: [
-            CircleAvatar(
-              radius: 28,
-              backgroundImage: AssetImage('images/avatar_photo.jpg'),
-            )
-          ],
-        ),
         body:Container( // THIS IS THE MAIN CONTAINER HOLDING EVERYTHING
           decoration: BoxDecoration(color:Colors.black),
           child: Padding(
-            padding: const EdgeInsets.all(24.0),
+            padding: const EdgeInsets.all(16.0),
             child: SingleChildScrollView(
               child: Column(// THIS IS THE COLUMN HOLDING EVERYTHING
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(      // THIS IS THE HEADER ROW
-                    children: [
-                      Expanded(child: Text('New Workout',style: TextStyle(color:Colors.white, fontSize: 36),)),
-                      TextButton(
-                          onPressed:(){},
-                          style: ButtonStyle(
-                            backgroundColor: WidgetStatePropertyAll(
-                              Colors.white24,
-                            ),
-                          ),
-                          child: Text('Draft', style: TextStyle(color:Colors.greenAccent.shade700, fontSize: 14),)
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 10),
-                  Text('Design your custom training protocol', style: TextStyle(color:Colors.white24, fontSize: 16)),
-              
+                  WorkoutHeader(),
+                  Text('Design your custom training protocol', style: TextStyle(fontFamily: 'Manrope',color:Colors.white24, fontSize: 16)),
+                  SizedBox(height: 32),
                   // STARTING FIRST CONTAINER
               
                   Padding(
@@ -64,7 +36,7 @@ class _WorkoutAppState extends State<WorkoutApp> {
                           color: Color(0xFF121411), borderRadius: BorderRadius.circular(12),
                         ),
                       child:Padding(
-                        padding: const EdgeInsets.all(16.0),
+                        padding: const EdgeInsets.all(20.0),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -316,7 +288,29 @@ class _WorkoutAppState extends State<WorkoutApp> {
           ),
         )
           
-      )
+      );
+  }
+
+}
+
+class WorkoutHeader extends StatelessWidget {
+  const WorkoutHeader({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(      // THIS IS THE HEADER ROW
+      children: [
+        Expanded(child: Text('New Workout',style: TextStyle(fontFamily: 'Lexend' ,color:Colors.white, fontSize: 36),)),
+        TextButton(
+            onPressed:(){},
+            style: ButtonStyle(
+              backgroundColor: WidgetStatePropertyAll(
+                Colors.white24,
+              ),
+            ),
+            child: Text('Draft', style: TextStyle(color:Colors.greenAccent.shade700, fontSize: 14),)
+        ),
+      ],
     );
   }
 }
