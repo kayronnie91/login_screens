@@ -28,80 +28,9 @@ class _CreateWorkoutPlanState extends State<CreateWorkoutPlan> {
                   Text('Design your custom training protocol', style: TextStyle(fontFamily: 'Manrope',color:Colors.white24, fontSize: 16)),
                   SizedBox(height: 32),
                   // STARTING FIRST CONTAINER
+                  ProtocolCard(),
               
-                  Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Container(
-                        decoration: BoxDecoration(
-                          color: Color(0xFF121411), borderRadius: BorderRadius.circular(12),
-                        ),
-                      child:Padding(
-                        padding: const EdgeInsets.all(20.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('PROTOCOL NAME', style: TextStyle(color:Colors.white24),),
-                            SizedBox(height: 8),
-              
-                            // FIRST FORM FIELD
-              
-                            TextFormField(
-                              style: TextStyle(color:Colors.white24, fontSize: 16),
-                              decoration: InputDecoration(
-                                fillColor: Color(0xFF1E201C),
-                                filled: true,
-                                border:OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(12),
-                                ),
-                                labelText: 'e.g.,Upper Body Power'),
-                              ),
-                            SizedBox(height:24),
-                            Padding(
-                              padding: const EdgeInsets.all(16.0),
-                              child: Row(
-                                children: [
-                                  Expanded(child: Text('FOCUS', style: TextStyle(color:Colors.white),)),
-                                  Expanded(child: Text('EST. DURATION', style: TextStyle(color:Colors.white),)),
-                                ],
-                              ),
-                            ),
-                            SizedBox(height: 8),
-                            Row(
-                              children: [
-                                Expanded(child:
-                               TextFormField(
-                                 style:TextStyle(color:Colors.grey, fontSize: 16),
-                                 decoration: InputDecoration(
-                                   fillColor: Colors.black12,
-                                   filled: true,
-                                   border: OutlineInputBorder(
-                                     borderRadius: BorderRadius.circular(10),
-                                   )
-                                 ),
-                               ),
-                                ),
 
-                                SizedBox(width:15),
-
-                                Expanded(
-                                  child: TextFormField(
-                                    style:TextStyle(color:Colors.grey, fontSize: 16),
-                                    decoration: InputDecoration(
-                                      fillColor: Colors.black12,
-                                      border: OutlineInputBorder(
-                                        borderRadius: BorderRadius.circular(10),
-                                      )
-                                    ),
-                                  ),
-                                )
-                              ],
-                            ),
-                          ],
-                        ),
-                      )
-                    ),
-                  ),
                   SizedBox(height: 32),
                   Row(
                     children: [
@@ -311,6 +240,87 @@ class WorkoutHeader extends StatelessWidget {
             child: Text('Draft', style: TextStyle(color:Colors.greenAccent.shade700, fontSize: 14),)
         ),
       ],
+    );
+  }
+}
+
+class ProtocolCard extends StatelessWidget {
+  const ProtocolCard({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(10.0),
+      child: Container(
+          decoration: BoxDecoration(
+            color: Color(0xFF121411), borderRadius: BorderRadius.circular(12),
+          ),
+          child:Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('PROTOCOL NAME', style: TextStyle(color:Colors.white24),),
+                SizedBox(height: 8),
+
+                // FIRST FORM FIELD
+
+                TextFormField(
+                  style: TextStyle(color:Colors.white24, fontSize: 16),
+                  decoration: InputDecoration(
+                      fillColor: Color(0xFF1E201C),
+                      filled: true,
+                      border:OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      labelText: 'e.g.,Upper Body Power'),
+                ),
+                SizedBox(height:24),
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Row(
+                    children: [
+                      Expanded(child: Text('FOCUS', style: TextStyle(color:Colors.white),)),
+                      Expanded(child: Text('EST. DURATION', style: TextStyle(color:Colors.white),)),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 8),
+                Row(
+                  children: [
+                    Expanded(child:
+                    TextFormField(
+                      style:TextStyle(color:Colors.grey, fontSize: 16),
+                      decoration: InputDecoration(
+                          fillColor: Colors.black12,
+                          filled: true,
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          )
+                      ),
+                    ),
+                    ),
+
+                    SizedBox(width:15),
+
+                    Expanded(
+                      child: TextFormField(
+                        style:TextStyle(color:Colors.grey, fontSize: 16),
+                        decoration: InputDecoration(
+                            fillColor: Colors.black12,
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            )
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ],
+            ),
+          )
+      ),
     );
   }
 }
